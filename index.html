@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Todo-List</title>
+    <script defer src="script.js"></script>
+</head>
+
+<body onload="loadSavedList()">
+    <ul id="list">
+        <template id="list-item">
+            <li>
+                <input onchange="updateCount()" type="checkbox">
+                <label class="list-item-label"></label>
+            </li>
+        </template>
+    </ul>
+    <input id="todo-input" type="text">
+    <button onclick="addClicked()">Add</button>
+    <button onclick="clearClicked()">Clear Completed</button>
+    <br />
+    <label id="lbl-count"></label>
+</body>
+
+</html>
